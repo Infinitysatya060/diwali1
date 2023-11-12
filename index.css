@@ -1,0 +1,56 @@
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.letter{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6rem;
+    letter-spacing: 20px;
+    font-weight: 800;
+    
+}
+.second{
+    margin-left: 60px;
+}
+P{
+    opacity: 0;
+    display: inline-block;
+    animation: animate 1s linear forwards;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    
+}
+@keyframes animate{
+    0%{
+        opacity: 0;
+        transform: rotate(180deg);
+        filter: blur(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+video{
+    position: absolute;
+    width: 100%;
+}
+@media screen and (max-width: 1000px) {
+    .letter{
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 5rem;
+    }
+   p{
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+   }
+  }
